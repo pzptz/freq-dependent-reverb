@@ -8,8 +8,7 @@ builds on HW3 (FFT), HW4 (spectrogram / STFT) and HW5 (damped comb filter).
 
 Two methods are included:
 
-- **v1:** a per-bin recursion across STFT frames. It is exactly HW5's comb
-  filter, so it sounds metallic. Kept as the "before" in the comparison.
+- **v1:** a per-bin recursion across STFT frames that builds on HW5's comb filter.
 - **v2 (main method):** white noise goes through the STFT, every cell is faded
   with a frequency-dependent decay, and the inverse STFT gives the room's
   impulse response. The dry sound is then convolved with that response using
@@ -34,7 +33,7 @@ Use `python -m pip` so packages go into the active environment. The
 environment lives outside `final/`, so there is nothing to exclude when you zip
 the project. Run every command below from the `final/` folder.
 
-## Your recordings
+## Audio recordings
 
 Put three WAV files directly in `audio_in/`, named exactly:
 
@@ -72,7 +71,7 @@ final/
     reverb_v2.py    v2: impulse response from decaying noise, then convolution
     measure.py      RT60 ruler: measured decay time per band
   experiments/      exp01-exp07 as above, common.py (paths, figure settings, save helpers)
-  audio_in/         your dry recordings
+  audio_in/         input dry audio recordings
   audio_out/        sndNN_*.wav outputs
   figures/          figNN_*.png outputs, fig07_rt60.csv (RT60 table)
 ```
