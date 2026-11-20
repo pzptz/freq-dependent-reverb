@@ -1,0 +1,5 @@
+numpy==2.2.5
+scipy==1.15.2
+matplotlib==3.10.1
+# Compatible parser for warnings-as-errors with this Matplotlib version.
+pyparsing==3.2.3
